@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import {MyAcountPage} from "../pageObjects/myAcountPage/page"
+
+Cypress.Commands.add("login",()=>{
+    let maPage = new MyAcountPage()
+          
+
+    maPage.actions.visitMyAcountPage()
+    maPage.actions.typeLoginUserName("ahmad")
+    maPage.tests.checkLoginUserNameFilled()
+})

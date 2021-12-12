@@ -1,0 +1,10 @@
+Build E2E scenario that do the following:
+1- Navigate to https://admin-demo.nopcommerce.com/
+2- Create new category
+3- Create new manufacturer
+4- add new product tag.
+4- create new product under the created category and manufacturer
+	fill these fields for the created products: (productname, sku, prices, stock quantity
+	,short description, full description, category, manufacturer, show on home page 
+	should be checked, add the previously added tag.
+5- back to delete the previously added tag.

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #b{
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <button id="b">Click to start the Job</button>
+    <h1 id="h1"><span id="res"></span></h1>
+</body>
+<script>
+    
+    document.querySelector("#b").addEventListener("click",(e)=>{
+         
+        e.preventDefault();
+        document.querySelector("#h1").innerHTML='the result is:<span id="res">Runnig</span>'
+        ff()
+    })
+
+    let ff= ()=>{
+        let status = ["Partial-Done","Fail","Input Error","Done"]
+         let i
+         i = Math.floor(Math.random() * 4);
+         console.log(i)
+         let x 
+         x =getRndInteger(1000,180000); 
+         console.log(x)
+        setTimeout(()=>{
+            
+            // document.querySelector("#res").innerHTML = status[i]
+            document.querySelector("#res").innerHTML = "Done"
+
+        },x)
+    }
+
+    function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in">
+    <div class="ss">
+
+    </div>
+ 
+</body>
+
+<script>
+document.querySelector('#in').addEventListener("focusout",()=>{
+    document.querySelector(".ss").innerHTML = ""
+})
+document.querySelector('#in').addEventListener("focusin",()=>{
+    document.querySelector(".ss").innerHTML = `
+    <div id="test"title="sync">sync</div>
+        <div id="test"title="sync">sync</div>
+        <div id="test"title="sync">sync</div>
+        <div id="his" class="jj">inser</div>
+        <div id="hi" class="jj">inser</div>`
+})
+</script>
+</html>
